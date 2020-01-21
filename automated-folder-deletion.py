@@ -25,7 +25,7 @@ import argparse
 
 days_to_deletion = 14
 default_path = os.path.expanduser("~Downloads")
-results_path = "Downloads/automated-folder-deletion.log"
+results_path = os.path.expanduser("~Downloads/automated-folder-deletion.log")
 
 # List that contains a particular keyword within the target directory that indicates specific folders desired to keep
 keywords = ['Resume']
