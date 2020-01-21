@@ -5,7 +5,7 @@ Automated Folder Archival
 This script removes 14 day old build result folders from your desired directory (defaulted to Downloads)
 It has been given executable permission to allow you the ease of simply running the script.
 
-Normal operation will delete old build results located at os.path.expanduser(~Downloads)
+Normal operation will delete old build results located at os.path.expanduser("~Downloads")
 
 A custom path can also be used when calling the script using:
 -c  --custom path  "custom path entered by user to clean 14 day old folders"
