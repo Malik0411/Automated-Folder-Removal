@@ -24,8 +24,8 @@ import logging
 import argparse
 
 days_to_deletion = 14
-default_path = os.path.expanduser("~Downloads")
-results_path = os.path.expanduser("~Downloads/automated-folder-deletion.log")
+default_path = os.path.expanduser("~\\Downloads")
+results_path = os.path.expanduser("~\\Downloads\\automated-folder-deletion.log")
 
 # List that contains a particular keyword within the target directory that indicates specific folders desired to keep
 keywords = ['Resume']
@@ -42,7 +42,7 @@ def automate_deletion(number_of_days, path):
     # Loops through the folder paths within the root directory
     for directory in [x[0] for x in os.walk(path)]:
         # Ignores the root folder and allows access to subfolder names as group(2)
-        folder = re.match(r'^(.+)/([^/]+)$', directory)
+        folder = re.match(r'^(.+)\\([^\\]+)$', directory)
         if folder and os.path.join(folder.group(1),'') == path and not any(key in folder.group(2) for key in keywords):
             if os.path.getmtime(directory) < time_in_secs:
                 try:
