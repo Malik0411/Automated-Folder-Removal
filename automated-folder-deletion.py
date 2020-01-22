@@ -11,8 +11,8 @@ A custom path can also be used when calling the script using:
 -c  --custom path  "custom path entered by user to clean 14 day old folders"
 
 Ex:
-./automated-folder-deletion.py
-./automated-folder-deletion.py -c "Downloads"
+python automated-folder-deletion.py
+python automated-folder-deletion.py -c "Downloads"
 """
 
 import os
